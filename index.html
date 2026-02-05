@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>數學練習單：乘法拆解與對齊練習</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", sans-serif; padding: 10px; line-height: 1.6; }
+        .a4-page { width: 210mm; min-height: 297mm; margin: auto; padding: 15mm; box-sizing: border-box; background: white; border: 1px solid #ddd; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 20px; }
+        .info-bar { display: flex; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid #333; padding-bottom: 5px; }
+        
+        /* 示範區 */
+        .demo-area { background-color: #fff9db; border: 2px solid #f1c40f; padding: 15px; border-radius: 8px; margin-bottom: 30px; }
+        .demo-title { font-weight: bold; color: #d35400; font-size: 18px; display: block; margin-bottom: 10px; }
+
+        /* 題目區排版 */
+        .exercise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .math-box { border: 1px solid #ccc; padding: 20px; border-radius: 8px; position: relative; }
+        
+        /* 九宮格與標籤容器 */
+        .layout-flex { display: flex; align-items: flex-start; justify-content: center; margin-top: 15px; }
+        
+        .grid-table { border-collapse: collapse; }
+        .grid-table td { border: 1px solid #999; width: 45px; height: 45px; text-align: center; font-size: 26px; font-family: 'Courier New', Courier, monospace; }
+        
+        /* 等號線位置：在第二行（乘數）下方 */
+        .equal-line td { border-bottom: 4px solid #000 !important; }
+        
+        /* 標題行與無邊框單元格 */
+        .header-row td { border: none !important; font-size: 14px !important; color: #777; height: 25px !important; vertical-align: bottom; }
+        .no-border { border: none !important; }
+        .dashed-cell { border: 2px dashed #aaa !important; }
+        
+        .operator { position: absolute; left: 35px; top: 110px; font-size: 26px; font-weight: bold; }
+
+        /* 右側說明標籤 */
+        .side-labels { display: flex; flex-direction: column; margin-left: 10px; padding-top: 120px; }
+        .label-item { height: 47px; line-height: 47px; font-size: 14px; color: #666; }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .a4-page { border: none; box-shadow: none; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="a4-page">
+    <h1>二位數乘一位數：直式拆解練習</h1>
+    
+    <div class="info-bar">
+        <span>三年級數學練習卷</span>
+        <span>班級：__________ 姓名：__________ 座號：____</span>
+    </div>
+
+    <div class="demo-area">
+        <span class="demo-title">💡 老師的示範步驟：</span>
+        <strong>1. 不進位 (43 × 2)：</strong> 個位 3×2=6 填第一行；十位 40×2=80 填第二行；相加得 86。<br>
+        <strong>2. 進位 (27 × 3)：</strong> 個位 7×3=21 填第一行；十位 20×3=60 填第二行；相加得 81。
+    </div>
+
+    <div class="exercise-grid">
+        
+        <div class="math-box">
+            <div style="font-weight:bold;">(1) 43 × 2 (不進位)</div>
+            <div class="layout-flex">
+                <span class="operator">×</span>
+                <table class="grid-table">
+                    <tr class="header-row"><td>百</td><td>十</td><td>個</td></tr>
+                    <tr><td class="no-border"></td><td>4</td><td>3</td></tr>
+                    <tr class="equal-line"><td class="no-border"></td><td class="no-border"></td><td>2</td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr class="thick-bottom"><td></td><td></td><td></td></tr>
+                    <tr class="no-border"><td colspan="3" style="text-align:left; padding-top:10px; border:none !important;">Ans：</td></tr>
+                </table>
+                <div class="side-labels">
+                    <div class="label-item">← 3 × 2</div>
+                    <div class="label-item">← 40 × 2</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="math-box">
+            <div style="font-weight:bold;">(2) 27 × 3 (進位)</div>
+            <div class="layout-flex">
+                <span class="operator">×</span>
+                <table class="grid-table">
+                    <tr class="header-row"><td>百</td><td>十</td><td>個</td></tr>
+                    <tr><td class="no-border"></td><td>2</td><td>7</td></tr>
+                    <tr class="equal-line"><td class="no-border"></td><td class="no-border"></td><td>3</td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr class="thick-bottom"><td></td><td></td><td></td></tr>
+                    <tr class="no-border"><td colspan="3" style="text-align:left; padding-top:10px; border:none !important;">Ans：</td></tr>
+                </table>
+                <div class="side-labels">
+                    <div class="label-item">← 7 × 3</div>
+                    <div class="label-item">← 20 × 3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="math-box">
+            <div style="font-weight:bold;">(3) 58 × 4 (進位)</div>
+            <div class="layout-flex">
+                <span class="operator">×</span>
+                <table class="grid-table">
+                    <tr class="header-row"><td>百</td><td>十</td><td>個</td></tr>
+                    <tr><td class="no-border"></td><td>5</td><td>8</td></tr>
+                    <tr class="equal-line"><td class="no-border"></td><td class="no-border"></td><td>4</td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr class="thick-bottom"><td></td><td></td><td></td></tr>
+                    <tr class="no-border"><td colspan="3" style="text-align:left; padding-top:10px; border:none !important;">Ans：</td></tr>
+                </table>
+                <div class="side-labels">
+                    <div class="label-item">← 8 × 4</div>
+                    <div class="label-item">← 50 × 4</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="math-box">
+            <div style="font-weight:bold;">(4) 22 × 4 (不進位)</div>
+            <div class="layout-flex">
+                <span class="operator">×</span>
+                <table class="grid-table">
+                    <tr class="header-row"><td>百</td><td>十</td><td>個</td></tr>
+                    <tr><td class="no-border"></td><td>2</td><td>2</td></tr>
+                    <tr class="equal-line"><td class="no-border"></td><td class="no-border"></td><td>4</td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr><td class="dashed-cell"></td><td class="dashed-cell"></td><td class="dashed-cell"></td></tr>
+                    <tr class="thick-bottom"><td></td><td></td><td></td></tr>
+                    <tr class="no-border"><td colspan="3" style="text-align:left; padding-top:10px; border:none !important;">Ans：</td></tr>
+                </table>
+                <div class="side-labels">
+                    <div class="label-item">← 2 × 4</div>
+                    <div class="label-item">← 20 × 4</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
